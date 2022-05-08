@@ -6,13 +6,13 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 500);
+  createCanvas(1080, 720);
   textFont(myFont);
 }
 
 function draw() {
-  
-  
+
+
   switch (mode) {
     case 0:
       background(255,0,116);
@@ -24,16 +24,16 @@ function draw() {
       scene2();
       break;
     case 3:
-      scene3();   
+      scene3();
       break;
     case 4:
       scene4();
       break;
     default:
-      //  
+      //
   }
-  
-  
+
+
   /*
   if (mode == 0) {
     // ready
@@ -56,17 +56,17 @@ function keyPressed() {
 
 function scene1() {
   background(255, 0, 206);
-  
+
   fill(255, 255, 255);
   textSize(70);
   textAlign(CENTER);
   text('Screen 1', 300, 80);
-  
+
 }
 
 function scene2() {
   background(238, 0, 108);
-  
+
   fill(255, 255, 255);
   textSize(70);
   textAlign(CENTER);
@@ -75,7 +75,7 @@ function scene2() {
 
 function scene3() {
   background(255, 7, 169);
-  
+
   fill(255, 255, 255);
   textSize(70);
   textAlign(CENTER);
@@ -84,7 +84,7 @@ function scene3() {
 
 function scene4() {
   background(251, 0, 190);
-  
+
   fill(255, 255, 255);
   textSize(70);
   textAlign(CENTER);
