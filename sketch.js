@@ -1,16 +1,17 @@
 
-
+let sel;
+var button;
 let mode = 0;
 var myFont;
 
 function preload(){
   myFont = loadFont('DMSans-Regular.ttf');
-    img = loadImage (uterus = "uterus.png");
+//    img = loadImage (uterus = "coverimage.png");
 
 }
 
 function setup() {
-  createCanvas(1080, 720);
+  createCanvas(1920, 1080);
   textFont(myFont);
 
   for (let i = 0; i < 5; i++) {
@@ -26,7 +27,10 @@ function draw() {
   switch (mode) {
     case 0:
       background(255,0,116);
-      uterusGraphic();
+      //uterusGraphic();
+      fill(255);
+      textSize(45);
+      text('Press any key to continue', 400, 500);
       break;
     case 1:
       scene1();
@@ -41,7 +45,7 @@ function draw() {
       scene4();
       break;
     default:
-      //
+
   }
 
 
@@ -60,12 +64,14 @@ function scene1() {
   text('The start of Roe v. Wade', 350, 80);
 
   fill(255, 255, 255);
-  textSize(40);
+  textSize(50);
   textAlign(CENTER);
-  text('January 22nd, 1973...', 200, 200);
+  text('January 22nd, 1973...', 250, 200);
 
-  textSize(20);
-  text('The Supreme Court of the United States of America protects the right of a woman to have abortions...', 350, 300);
+  textSize(30);
+  text('The Supreme Court of the United States of America protects the right of a woman to have abortions...', 725, 300);
+
+  text('Abortions, however, are not for women, but for people who have a uterus.', 530, 400);
 
 
 }
@@ -74,12 +80,25 @@ function scene2() {
   background(238, 0, 108);
 
   fill(255, 255, 255);
+  sel = createSelect();
+  sel.position(900, 500);
+  sel.option('Contraceptive failure');
+  sel.option('Rape');
+  sel.option('Incest');
+  sel.option('Fetal anomalies');
+  sel.option('Illness during pregnancy');
+  sel.option('Contraceptive failure');
+  sel.option('Unwanted pregnacy');
+  sel.option('Risk of complicated birth');
+  sel.selected('View reasons');
+
   textSize(70);
   textAlign(CENTER);
   text('Bodily autonomy:', 300, 80);
+  textSize(40);
+  textWrap(WORD);
+  text('The need for abortions. See why abortions are necessary.', 400, 400, 900 );
 
-  textSize(20);
-  text('The need for abortions', 150, 200);
 }
 
 function scene3() {
@@ -88,7 +107,11 @@ function scene3() {
   fill(255, 255, 255);
   textSize(70);
   textAlign(CENTER);
-  text('No Abortions = Unsafe Abortions', 550, 80);
+  text('No Abortions = Unsafe Abortions', 950, 100);
+
+  textSize(40);
+textWrap(WORD);
+text('Banning abortions does not mean abortions will stop. People will continue to seek them, but they will no longer be safe, medical procedures.', 400, 250, 900);
 }
 
 function scene4() {
@@ -97,8 +120,9 @@ function scene4() {
   fill(255, 255, 255);
   textSize(70);
   textAlign(CENTER);
-  text('How can YOU help?', 330, 80);
+  text('How can YOU help?', 350, 100);
   textSize(30);
-  text('Click on the links below to contact your representatives', 400, 200);
-
+  text('Click on the link below to contact your representatives', 420, 200);
+  textSize(50);
+  text('www.house.gov/representatives/find-your-representative', 700, 420);
 }

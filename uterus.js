@@ -23,7 +23,7 @@ class hearts {
     //textSize(25);
   //  text("fighting for our rights!", 10, 50);
 
-    image(img, 10, 10);
+    image(img, 0, 0);
     pop();
   }
 
