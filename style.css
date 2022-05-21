@@ -1,11 +1,38 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: rgb(179, 90, 115);
 }
 canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 20px
-
+  border-radius: 40px
 }
+
+.button1 {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1{background-color: #ffc0d2;}
+.button2{background-color: #ffc0d2;}
