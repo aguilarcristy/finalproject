@@ -11,19 +11,39 @@ let people;
 let protest;
 let hanger;
 
+var saveRoevWade;
+
 function preload () {
   // PEOPLE IMAGE
   people = loadImage('people.png');
   protest = loadImage('protest.png');
   hanger = loadImage('hanger.png');
+
+  saveRoevWade = loadAnimation (
+    "blank.png",
+    "s.png",
+    "s.png",
+    "a.png",
+    "a.png",
+    "v.png",
+    "v.png",
+    "e.png",
+    "e.png",
+    "saveroevwade.png",
+    "saveroevwade.png",
+    "saveroevwade.png",
+    "saveroevwade.png",
+    "saveroevwade.png",
+
+  );
 }
 
 function setup() {
-  createCanvas(1500, 1080);
+  createCanvas(1500, 900);
 
   // Sel
   sel = createSelect();
-  sel.position(750, 400);
+  sel.position(300, 350);
   sel.option("Contraceptive failure");
   sel.option("Rape");
   sel.option("Incest");
@@ -180,13 +200,9 @@ function scene0() {
   noStroke();
   rect(100, 200, 900, 800, 10);
 
-  let vol = mic.getLevel();
-  fill(179, 90, 115);
-  noStroke();
-  let h = map (vol, 0, 1, height, 0);
-  fill(127);
-  textSize(60);
-  text("Learn about bodily autonomy", (h-500), 400);
+
+
+  animation(saveRoevWade, 480, 550);
 }
 
 function scene1() {
@@ -215,7 +231,6 @@ function scene2() {
 
   fill(179, 90, 115);
 
-
   textSize(70);
   textAlign(CENTER);
   text("Bodily autonomy:", 300, 80);
@@ -223,15 +238,15 @@ function scene2() {
   textWrap(WORD);
   text(
     "The need for abortions. See why abortions are necessary.",
-    400,
-    300,
+    5,
+    200,
     900
   );
 
   myButton3.draw();
   sel.show();
 
-  image(protest, 0, 300);
+  image(protest, 900, 50);
 }
 
 function scene3() {
@@ -265,13 +280,7 @@ function scene4() {
   textAlign(CENTER);
   text("How can YOU help?", 350, 100);
   textSize(30);
-  text("Click on the link below to contact your representatives", 390, 200);
+  text("Scroll down and click on the 'Resources' button!", 390, 200);
   textSize(50);
-  text("www.house.gov/representatives/find-your-representative", 650, 420);
     sel.hide();
-
-    // Link for Scene 4
-
-    let t= createT('www.house.gov/representatives/find-your-representative', 'Click here');
-    t.position(700, 460);
 }
