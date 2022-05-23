@@ -13,6 +13,7 @@ let hanger;
 var saveRoevWade;
 var arrowDown;
 
+
 function preload () {
   // PEOPLE IMAGE
   people = loadImage('people.png');
@@ -36,7 +37,6 @@ function preload () {
     "saveroevwade.png",
 
   );
-
   arrowDown = loadAnimation (
     "arrow1.png",
     "arrow1.png",
@@ -50,14 +50,21 @@ function preload () {
     "arrow6.png",
     "arrow6.png",
   )
+  img = loadImage(uterus = "uterus.png");
 }
 
 function setup() {
   createCanvas(1500, 900);
 
+  for (let i = 0; i < 5; i++) {
+      let x = translate(width * 1, width * 100);
+      let y = translate(height * 1, height * 1);
+      bigHearts[i] = new hearts(x, y);
+    }
+
   // Sel
   sel = createSelect();
-  sel.position(300, 350);
+  sel.position(400, 350);
   sel.option("Contraceptive failure");
   sel.option("Rape");
   sel.option("Incest");
@@ -202,7 +209,7 @@ function scene0() {
   fill(179, 90, 115);
   textSize(60);
   textAlign(CENTER);
-  text("Welcome", 220, 80);
+  text("Welcome", 600, 80);
   myButton.draw();
 
   fill(255);
@@ -228,7 +235,6 @@ function scene1() {
   text('The Supreme Court of the United States of America ruled that pregnant people would, under the constitution, be able to exercise the right to have an abortion without the government intervening excessively.', 10, 300, 600);
 
   image(people, 600, 100);
-
   myButton2.draw();
 }
 
@@ -239,20 +245,22 @@ function scene2() {
 
   textSize(70);
   textAlign(CENTER);
-  text("Bodily autonomy:", 300, 80);
+  text("Bodily autonomy", 700, 80);
   textSize(40);
   textWrap(WORD);
   text(
     "The need for abortions. See why abortions are necessary.",
     5,
-    200,
-    900
+    600,
+    1200
   );
 
   myButton3.draw();
   sel.show();
 
   image(protest, 900, 50);
+  uterusGraphic();
+
 }
 
 function scene3() {
