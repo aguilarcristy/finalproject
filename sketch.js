@@ -19,7 +19,7 @@ function preload () {
 }
 
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(1500, 1080);
 
   // Sel
   sel = createSelect();
