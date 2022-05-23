@@ -6,12 +6,12 @@ var myButton4;
 var sel;
 
 let mic;
-let t;
 let people;
 let protest;
 let hanger;
 
 var saveRoevWade;
+var arrowDown;
 
 function preload () {
   // PEOPLE IMAGE
@@ -36,6 +36,20 @@ function preload () {
     "saveroevwade.png",
 
   );
+
+  arrowDown = loadAnimation (
+    "arrow1.png",
+    "arrow1.png",
+    "arrow2.png",
+    "arrow2.png",
+    "arrow3.png",
+    "arrow4.png",
+    "arrow4.png",
+    "arrow5.png",
+    "arrow5.png",
+    "arrow6.png",
+    "arrow6.png",
+  )
 }
 
 function setup() {
@@ -157,11 +171,6 @@ function setup() {
     }
   };
 
-  // MICROPHONE
-  mic = new p5.AudioIn();
-  mic.start();
-
-
 }
 
 function draw() {
@@ -199,9 +208,6 @@ function scene0() {
   fill(255);
   noStroke();
   rect(100, 200, 900, 800, 10);
-
-
-
   animation(saveRoevWade, 480, 550);
 }
 
@@ -282,5 +288,7 @@ function scene4() {
   textSize(30);
   text("Scroll down and click on the 'Resources' button!", 390, 200);
   textSize(50);
-    sel.hide();
+  sel.hide();
+
+  animation(arrowDown, 700, 500);
 }
