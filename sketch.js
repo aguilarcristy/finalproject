@@ -7,6 +7,16 @@ var sel;
 
 let mic;
 let t;
+let people;
+let protest;
+let hanger;
+
+function preload () {
+  // PEOPLE IMAGE
+  people = loadImage('people.png');
+  protest = loadImage('protest.png');
+  hanger = loadImage('hanger.png');
+}
 
 function setup() {
   createCanvas(1920, 1080);
@@ -195,7 +205,7 @@ function scene1() {
   textWrap(WORD);
   text('The Supreme Court of the United States of America ruled that pregnant people would, under the constitution, be able to exercise the right to have an abortion without the government intervening excessively.', 10, 300, 600);
 
-
+  image(people, 600, 100);
 
   myButton2.draw();
 }
@@ -220,6 +230,8 @@ function scene2() {
 
   myButton3.draw();
   sel.show();
+
+  image(protest, 0, 300);
 }
 
 function scene3() {
@@ -240,6 +252,8 @@ function scene3() {
   );
   myButton4.draw();
     sel.hide();
+
+  image(hanger, 0, 80);
 
 }
 
